@@ -1,131 +1,336 @@
-%% Copyright 2007-2018 Elsevier Ltd
-%% 
-%% This file is part of the 'Elsarticle Bundle'.
-
-%% ---------------------------------------------
-%% 
-%% It may be distributed under the conditions of the LaTeX Project Public
-%% License, either version 1.2 of this license or (at your option) any
-%% later version.  The latest version of this license is in
-%%    http://www.latex-project.org/lppl.txt
-%% and version 1.2 or later is part of all distributions of LaTeX
-%% version 1999/12/01 or later.
-%% 
-%% The list of all files belonging to the 'Elsarticle Bundle' is
-%% given in the file `manifest.txt'.
-%% 
-%% Template article for Elsevier's document class `elsarticle'
-%% with harvard style bibliographic references
-
-%\documentclass[preprint,12pt,authoryear]{elsarticle}
-
-%\documentclass[twocolumn,12pt,authoryear]{elsarticle}
-%% Use the option review to obtain double line spacing
-%\documentclass[authoryear,preprint,review,12pt]{elsarticle}
-
-%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
-%% for a journal layout:
-%%\documentclass[final,1p,times,authoryear]{elsarticle}
-%%\documentclass[final,1p,times,twocolumn,authoryear]{elsarticle}
-%%\documentclass[final,3p,times,authoryear]{elsarticle}
-\documentclass[final,3p,twocolumn]{elsarticle}
-%%\documentclass[final,5p,times,authoryear]{elsarticle}
-%%\documentclass[final,5p,times,twocolumn,authoryear]{elsarticle}
-
-%% For including figures, graphicx.sty has been loaded in
-%% elsarticle.cls. If you prefer to use the old commands use
-%%\usepackage{epsfig}
-%% The amssymb package provides various useful mathematical symbols
+\documentclass[final,3p]{elsarticle}
+\usepackage[utf8]{inputenc}
 \usepackage{amssymb}
-%% The amsthm package provides extended theorem environments
  \usepackage{amsthm}
-%\usepackage{graphicx}% Include figure files
-%\usepackage{pdflscape}
- \usepackage[figuresright]{rotating}
- \usepackage{hyperref}
- \usepackage{subfig}
- \usepackage{lineno}
- \usepackage{natbib}
-%\usepackage{array}
-%\usepackage{dcolumn,multirow}
-% Align table columns on decimal point
-%% The lineno packages adds line numbers. Start line numbering with \begin{linenumbers} and end with \end{linenumbers}
-%% Or switch it on
+  \usepackage[figuresright]{rotating}
+   \usepackage{hyperref}
+    \usepackage{subfig}
+     \usepackage{lineno}
+      \usepackage{natbib}
+      
+ \linenumbers     
+ \journal{Nuclear Instruments and Methods A}
+ \begin{document}
+ \begin{frontmatter}
+\title{JLAB2 DataAnalysisHub}
 
-\linenumbers
-%\journal{Nuclear Instruments and Methods A}
-\begin{document}
-\begin{frontmatter}
-%% Title, authors and addresses
-%% use the tnoteref command within \title for footnotes;
-%% use the tnotetext command for theassociated footnote;
-%% use the fnref command within \author or \addoratorytnote;
-%% use the corref command within \author for corresponding author footnotes;
-%% use the cortext command for theassociated footnote;
-%% use the ead command for the email address,
-%% and the form \ead[url] for the home page:
-%% \title{Title\tnoteref{label1}}
-%% \tnotetext[label1]{}
-%% \author{Name\corref{cor1}\fnref{label2}}
-%% \ead{email address}
-%% \ead[url]{home page}
-%% \fntext[label2]{}
-%% \cortext[cor1]{}
-%% \address{Address\fnref{label3}}
-%% \fntext[label3]{}
+\newcommand*{\ANL}{Argonne National Laboratory, Argonne, Illinois 60439}
+\newcommand*{\ANLindex}{1}
+\newcommand*{\CSUDH}{California State University, Dominguez Hills, Carson, CA 90747}
+\newcommand*{\CSUDHindex}{2}
+\newcommand*{\CANISIUS}{Canisius College, Buffalo, NY 14208}
+\newcommand*{\CANISIUSindex}{3}
+\newcommand*{\SACLAY}{IRFU, CEA, Universit\'{e} Paris-Saclay, F-91191 Gif-sur-Yvette, France}
+\newcommand*{\SACLAYindex}{4}
+\newcommand*{\CNU}{Christopher Newport University, Newport News, Virginia 23606}
+\newcommand*{\CNUindex}{5}
+\newcommand*{\UCONN}{University of Connecticut, Storrs, Connecticut 06269}
+\newcommand*{\UCONNindex}{6}
+\newcommand*{\DUKE}{Duke University, Durham, North Carolina 27708}
+\newcommand*{\DUKEindex}{7}
+\newcommand*{\DUQUESNE}{Duquesne University, Pittsburgh, PA 15282}
+\newcommand*{\DUQUESNEindex}{8}
+\newcommand*{\FU}{Fairfield University, Fairfield CT 06824}
+\newcommand*{\FUindex}{9}
+\newcommand*{\FERRARAU}{Universita' di Ferrara , 44121 Ferrara, Italy}
+\newcommand*{\FERRARAUindex}{10}
+\newcommand*{\FIU}{Florida International University, Miami, Florida 33199}
+\newcommand*{\FIUindex}{11}
+\newcommand*{\GWUI}{The George Washington University, Washington, DC 20052}
+\newcommand*{\GWUIindex}{12}
+\newcommand*{\ISU}{Idaho State University, Pocatello, Idaho 83209}
+\newcommand*{\ISUindex}{13}
+\newcommand*{\INFNFE}{INFN, Sezione di Ferrara, 44100 Ferrara, Italy}
+\newcommand*{\INFNFEindex}{14}
+\newcommand*{\INFNFR}{INFN, Laboratori Nazionali di Frascati, 00044 Frascati, Italy}
+\newcommand*{\INFNFRindex}{15}
+\newcommand*{\INFNGE}{INFN, Sezione di Genova, 16146 Genova, Italy}
+\newcommand*{\INFNGEindex}{16}
+\newcommand*{\INFNRO}{INFN, Sezione di Roma Tor Vergata, 00133 Rome, Italy}
+\newcommand*{\INFNROindex}{17}
+\newcommand*{\INFNTUR}{INFN, Sezione di Torino, 10125 Torino, Italy}
+\newcommand*{\INFNTURindex}{18}
+\newcommand*{\INFNPAV}{INFN, Sezione di Pavia, 27100 Pavia, Italy}
+\newcommand*{\INFNPAVindex}{19}
+\newcommand*{\ORSAY}{Institut de Physique Nucl\'{e}aire, IN2P3-CNRS, Universit\'{e} Paris-Sud, Universit\'{e} Paris-Sacla, F-91406 Orsay, France}
+\newcommand*{\ORSAYindex}{20}
+\newcommand*{\Juelich}{Institute fur Kernphysik (Juelich), 52428 Juelich, Germany}
+\newcommand*{\Juelichindex}{21}
+\newcommand*{\JMU}{James Madison University, Harrisonburg, Virginia 22807}
+\newcommand*{\JMUindex}{22}
+\newcommand*{\KNU}{Kyungpook National University, Daegu 41566, Republic of Korea}
+\newcommand*{\KNUindex}{23}
+\newcommand*{\LAMAR}{Lamar University, Beaumont, Texas 77710}
+\newcommand*{\LAMARindex}{24}
+\newcommand*{\MIT}{Massachusetts Institute of Technology, Cambridge, Massachusetts  02139}
+\newcommand*{\MITindex}{25}
+\newcommand*{\MISS}{Mississippi State University, Mississippi State, MS 39762}
+\newcommand*{\MISSindex}{26}
+\newcommand*{\ITEP}{National Research Centre Kurchatov Institute - ITEP, Moscow, 117259, Russia}
+\newcommand*{\ITEPindex}{27}
+\newcommand*{\UNH}{University of New Hampshire, Durham, New Hampshire 03824}
+\newcommand*{\UNHindex}{28}
+\newcommand*{\NSU}{Norfolk State University, Norfolk, Virginia 23504}
+\newcommand*{\NSUindex}{29}
+\newcommand*{\OHIOU}{Ohio University, Athens, Ohio  45701}
+\newcommand*{\OHIOUindex}{30}
+\newcommand*{\ODU}{Old Dominion University, Norfolk, Virginia 23529}
+\newcommand*{\ODUindex}{31}
+\newcommand*{\URICH}{University of Richmond, Richmond, Virginia 23173}
+\newcommand*{\URICHindex}{32}
+\newcommand*{\ROMAII}{Universita' di Roma Tor Vergata, 00133 Rome Italy}
+\newcommand*{\ROMAIIindex}{33}
+\newcommand*{\MSU}{Skobeltsyn Institute of Nuclear Physics, Lomonosov Moscow State University, 119234 Moscow, Russia}
+\newcommand*{\MSUindex}{34}
+\newcommand*{\SCAROLINA}{University of South Carolina, Columbia, South Carolina 29208}
+\newcommand*{\SCAROLINAindex}{35}
+\newcommand*{\TEMPLE}{Temple University,  Philadelphia, PA 19122}
+\newcommand*{\TEMPLEindex}{36}
+\newcommand*{\JLAB}{Thomas Jefferson National Accelerator Facility, Newport News, Virginia 23606}
+\newcommand*{\JLABindex}{37}
+\newcommand*{\UTFSM}{Universidad T\'{e}cnica Federico Santa Mar\'{i}a, Casilla 110-V Valpara\'{i}so, Chile}
+\newcommand*{\UTFSMindex}{38}
+\newcommand*{\INSUBRIA}{Universita degli Studi dellInsubria, 22100 Como, Italy}
+\newcommand*{\INSUBRIAindex}{39}
+\newcommand*{\BRESCIA}{Universit`a degli Studi di Brescia, 25123 Brescia, Italy}
+\newcommand*{\BRESCIAindex}{40}
+\newcommand*{\GLASGOW}{University of Glasgow, Glasgow G12 8QQ, United Kingdom}
+\newcommand*{\GLASGOWindex}{41}
+\newcommand*{\YORK}{University of York, York YO10 5DD, United Kingdom}
+\newcommand*{\YORKindex}{42}
+\newcommand*{\VIRGINIA}{University of Virginia, Charlottesville, Virginia 22901}
+\newcommand*{\VIRGINIAindex}{43}
+\newcommand*{\WM}{College of William and Mary, Williamsburg, Virginia 23187}
+\newcommand*{\WMindex}{44}
+\newcommand*{\YEREVAN}{Yerevan Physics Institute, 375036 Yerevan, Armenia}
+\newcommand*{\YEREVANindex}{45}
+ %%%%%%%%%%%%%%% END OF Latex Macros for institute addresses  %%%%%%%%%%%%%%%%%%%%%%%%% 
+ 
+\author[toJLAB]{V.D.~Burkert}
+\author[toMISS]{K.P. ~Adhikari}
+\author[toFIU]{S.~Adhikari}
+\author[toODU]{M.J.~Amaryan}
+\author[toJLAB]{D.~Anderson}
+\author[toGWU]{G.~Angelini}
+\author[toTEMPLE]{H.~Atac}
+\author[toSACLAY]{S.~Aune}
+\author[toJLAB]{H.~Avakian}
+\author[toWM,toMISS]{C.~Ayerbe Gayoso}
+\author[toJLAB]{N.~Baltzell}
+\author[toINFNFE]{L.~Barion}
+\author[toINFNGE,toJLAB]{M.~Battaglieri}
+\author[toJLAB]{V.~Baturin}
+\author[toITEP]{I.~Bedlinskiy}
+\author[toDUQUESNE]{F.~Benmokhtar}
+\author[toBRESCIA,toINFNPAV]{A.~Bianconi}
+\author[toFU]{A.S.~Biselli}
+\author[toSACLAY]{F.~Boss\`u}
+\author[toJLAB]{S.~Boyarinov}
+\author[toGWUI]{W.J.~Briscoe}
+\author[toUTFSM]{W.K.~Brooks}
+\author[toJLAB]{K.~Bruhwel}
+\author[toJLAB]{D.S.~Carman}
+\author[toINFNGE]{A.~Celentano}
+\author[toORSAY,toODU]{G.~Charles}
+\author[toORSAY]{P.~Chatagnon}
+\author[toJLAB]{S.~Christo}
+\author[toMISS,toOHIOU]{T.~Chetry}
+\author[toGLASGOW,toSACLAY]{G.~Christiaens}
+\author[toINFNFE,toFERRARAU]{G.~Ciullo}
+\author[toUCONN]{B.A.~Clary}
+\author[toLAMAR,toISU]{P.L.~Cole}
+\author[toINFNFE]{M.~Contalbrigo}
+\author[toMIT]{R.~Cruz-Torres}
+\author[toJLAB]{C.~Cuevas}
+\author[toINFNRO,toROMAII]{A.~D'Angelo}
+\author[toYEREVAN]{N.~Dashyan}
+\author[toINFNGE]{R.~De~Vita}
+\author[toSACLAY]{M.~Defurne}
+\author[toJLAB]{A.~Deur}
+\author[toUCONN]{S.~Diehl}
+\author[toOHIOU,toSCAROLINA]{C.~Djalali}
+\author[toODU]{G.~Dodge}
+\author[toORSAY]{R.~Dupre}
+\author[toANL,toORSAY]{M.~Ehrhart}
+\author[toMISS]{L.~El~Fassi}
+\author[toJLAB]{L.~Elouadrhiri}
+\author[toJLAB]{R.~Fair}
+\author[toOHIOU]{G.~Fedotov}
+\author[toINFNTUR]{A.~Filippi}
+\author[toISU]{T.A.~Forest}
+\author[toSACLAY]{M.~Gar\c{c}on}
+\author[toJLAB]{G.~Gavalian}
+\author[toURICH]{G.P.~Gilfoyle}
+\author[toJMU]{K.~Giovanetti}
+\author[toJLAB]{F.X.~Girod}
+\author[toGLASGOW]{D.I.~Glazier}
+\author[toMSU]{E.~Golovatch}
+\author[toSCAROLINA]{R.W.~Gothe}
+\author[toJLAB]{Y.~Gotra}
+\author[toWM]{K.A.~Griffioen}
+\author[toORSAY]{M.~Guidal}
+\author[toANL]{K.~Hafidi}
+\author[toUTFSM,toYEREVAN]{H.~Hakobyan}
+\author[toJLAB]{C.~Hanretty}
+\author[toJLAB]{N.~Harrison}
+\author[toODU,toANL]{M.~Hattawy}
+\author[toODU]{F.~Hauenstein}
+\author[toWM]{T.B.~Hayward}
+\author[toCNU,toJLAB]{D.~Heddle}
+\author[toJLAB]{P.~Hemler}
+\author[toMIT]{O.A.~Hen}
+\author[toOHIOU]{K.~Hicks}
+\author[toORSAY]{A.~Hobart}
+\author[toUNH]{M.~Holtrop}
+\author[toSCAROLINA]{Y.~Ilieva}
+\author[toGWUI]{I.~Illari}
+\author[toJLAB]{D.~Insley}
+\author[toGLASGOW]{D.G.~Ireland}
+\author[toMSU]{B.S.~Ishkhanov}
+\author[toMSU]{E.L.~Isupov}
+\author[toKNU]{H.S.~Jo}
+\author[toUCONN]{K.~Joo}
+\author[toANL,toTEMPLE]{S.~Joosten}
+\author[toJLAB]{T.~Kageya}
+\author[toJLAB]{D.~Kashy}
+\author[toJLAB]{C.~Keith}
+\author[toVIRGINIA]{D.~Keller}
+\author[toODU]{M.~Khachatryan}
+\author[toFIU]{A.~Khanal}
+\author[toUCONN]{A.~Kim}
+\author[toGWUI]{C.W.~Kim}
+\author[toKNU]{W.~Kim}
+\author[toJLAB]{V.~Kubarovsky}
+\author[toODU]{S.E.~Kuhn}
+\author[toINFNRO]{L.~Lanza}
+\author[toJLAB]{A.~Lung}
+\author[toMISS]{M.L.~Kabir}
+\author[toBRESCIA,toINFNPAV]{M.~Leali}
+\author[toINFNFE]{P.~Lenisa}
+\author[toGLASGOW]{K.~Livingston}
+\author[toJLAB]{M.~Lowry}
+\author[toGLASGOW]{I .J.D.~MacGregor}
+\author[toSACLAY]{I.~Mandjavidze}
+\author[toORSAY]{D.~Marchand}
+\author[toUCONN]{N.~Markov}
+\author[toINSUBRIA,toINFNPAV,toBRESCIA]{V.~Mascagna}
+\author[toGLASGOW]{B.~McKinnon}
+\author[toJLAB]{M.~McMullen}
+\author[toJLAB]{C.~Mealer}
+\author[toJLAB]{M.D.~Mestayer}
+\author[toANL,toTEMPLE]{Z.E.~Meziani}
+\author[toJLAB]{R.~Miller}
+\author[toUTFSM]{T.~Mineeva}
+\author[toINFNFR]{M.~Mirazita}
+\author[toJLAB]{V.~Mokeev}
+\author[toINFNFE]{A~Movsisyan}
+\author[toORSAY]{C.~Munoz~Camacho}
+\author[toGLASGOW]{P.~Naidoo}
+\author[toMISS]{S.~Nanda}
+\author[toODU]{J.~Newton}
+\author[toORSAY]{S.~Niccolai}
+\author[toJMU]{G.~Niculescu}
+\author[toINFNGE]{M.~Osipenko}
+\author[toTEMPLE]{M.~Paolone}
+\author[toINFNFE]{L.L.~Pappalardo}
+\author[toUNH]{R.~Paremuzyan}
+\author[toJLAB]{O.~Pastor}
+\author[toJLAB]{E.~Pasyuk}
+\author[toCNU,toGWUI]{W.~Phelps}
+\author[toITEP]{O.~Pogorelko}
+\author[toODU]{J.~Poudel}
+\author[toCSUDH]{J.W.~Price}
+\author[toORSAY]{K.~Price}
+\author[toODU]{Y.~Prok}
+\author[toFIU,toJLAB]{B.A.~Raue}
+\author[toINFNGE]{M.~Ripani}
+\author[toJuelich]{J.~Ritman}
+\author[toINFNRO,toROMAII]{A.~Rizzo}
+\author[toJLAB]{P.~Rossi}
+\author[toOHIOU]{J.~Rowley}
+\author[toJuelich]{B.J.~Roy}
+\author[toSACLAY]{F.~Sabati\'e}
+\author[toNSU]{C.~Salgado}
+\author[toJuelich]{S.~Schadmand}
+\author[toMIT,toGWUI]{A.~Schmidt}
+\author[toMIT]{E.P.~Segarra}
+\author[toORSAY]{V.~Sergeyeva}
+\author[toJLAB]{Y.G.~Sharabian}
+\author[toOHIOU]{U.~Shrestha}
+\author[toSCAROLINA,toMSU]{Iu.~Skorodumina}
+\author[toEDINBURGH]{G.D.~Smith}
+\author[toUVa,toJLAB]{L.C.~Smith}
+\author[toGLASGOW]{D.~Sokhan}
+\author[toINFNFR,toUTFSM]{O.~Soto}
+\author[toTEMPLE]{N.~Sparveris}
+\author[toRPI]{P.~Stoler}
+\author[toSCAROLINA]{S.~Strauch}
+\author[toKNU]{J.A.~Tan}
+\author[toJLAB]{D.~Tilles}
+\author[toINFNFR]{M.~Turisini}
+\author[toSCAROLINA]{N.~Tyler}
+\author[toJLAB]{M.~Ungaro}
+\author[toBRESCIA,toINFNPAV]{L.~Venturelli}
+\author[toYEREVAN]{H.~Voskanyan}
+\author[toORSAY]{E.~Voutier}
+\author[toYORK]{D.~Watts}
+\author[toJLAB]{X.~Wei}
+\author[toODU]{L.B.~Weinstein}
+\author[toJLAB]{C.~Wiggins}
+\author[toCANISIUS]{M.H.~Wood}
+\author[toJLAB]{A.~Yegneswaran}
+\author[toJLAB]{G.~Young}
+\author[toYORK]{N.~Zachariou}
+\author[toJLAB]{M.~Zarecky}
+\author[toVIRGINIA]{J.~Zhang}
+\author[toDUKE,toODU]{Z.W.~Zhao}
+\author[toJLAB]{V.~Ziegler}
 
-\title{The CLAS12 Spectrometer at Jefferson Laboratory}
-
-%% use optional labels to link authors explicitly to addresses:
-%% \author[label1,label2]{}
-%% \address[label1]{}
-%% \address[label2]{}
-\author{V.D. Burkert, L. Elouadrhiri, D. Anderson, S. Aune, H. Avakian, N. Baltzell, M. Battaglieri,  V. Baturin,
-  S. Boiarinov, F. Bossu, K. Bruhwel, D.S. Carman, S. Christo, A. Celentano, M. Contalbrigo,  C. Cuevas, N. Dashyan,
-  M. Defurne, G. Dodge, R. De Vita, R. Fair, K. Giovanetti, F.X. Girod, K. Griffioen, R. Gothe, Y. Gotra, K. Hafidi, T. Hayward, 
-  D. Heddle, P. Hemler, K. Hicks, D. Insley, K. Joo, D. Kashy, C. Keith, A. Kim, W. Kim, V. Kubarovsky, S. Kuhn, A. Lung,
-  M. McMullen, I. Mandjavidze, N. Markov, C. Mealer, M.D. Mestayer, Z.E. Meziani, R. Miller, M. Mirazita, V. Mokeev,
-  J. Newton, S. Niccolai, R. Paremuzyan, O. Pastor, E. Pasyuk, O. Pogorelko, B.A. Raue, P. Rossi, F. Sabatie, Y.G. Sharabian,
-  L.C. Smith, D. Sokhan, J. A. Tan, D. Tilles, M. Ungaro, A. Vlassov, D. Watts, L. Weinstein, C. Wiggins, A. Yegneswaran,
-  G. Young, M. Zarecky, V. Ziegler, ......... more coming .............}
-%\address{12000 Jefferson Avenue, Newport News, Virginia, 23606}
-%\author{ K. Hafidi,  .......} 
-%\address{ Argonne National Laboratory, Argonne, Illinois, 60439, USA}
-%\author{D. Heddle, ........}
-%\address{Christopher Newport University, Newport News, Virginia 23605, USA} 
-%\author{K. Joo, A. Kim, N. Markov, ........} 
-%\address{University of Connecticut, Storrs, Connecticut 06269, USA} 
-%\author{A. Biselli,..}
-%\address{Fairfield University, Fairfield, Connecticut 06824, USA}
-%\author{L. Guo, B. Raue, ...}
-%\address{Florida International University, Miami, Florida, 33199, USA} 
-%\author{S. Aune, M. Defurne, I. Mandjavidze, F. Sabatie, .......}
-%\address{IRFU, CEA, Universit{\'e} Paris-Saclay, F-91191 Gif-sur-Yvette, France}
-%\author{M. Battaglieri, A. Celentano, R. De Vita, .....}
-%\address{INFN, Sezione di Genova, 16146 Genova, Italy}
-%\author{P. Chatagnon, S. Niccolai, ......}
-%\address{Institut de Physique Nucl{\'e}aire, IN2P3-CNRS, Universit{\'e} Paris-Sud,  Universit{\'e} Paris-Saclay,
- % F-91406 Orsay, France}
-%\author{O. Pogorelko, A. Vlassov, ....} 
-%\address{Institute of Theoretical and Experimental Physics, Moscow, Russia}
-%\author{G. Dodge, S. Kuhn, L. Weinstein,  Victoria xxx, ........}
-%\address{Old Dominion University, Norfolk, Virginia, 23529, USA} 
-%\author{R. Gothe, ...................}
-%\address{University of South Carolina, Columbia, South Carolina 29208}
-%\author{ K. Hicks, ....} 
-%\address{ Ohio University, Athens, Ohio, 45701}
-%\author{P. Cole, T. Forrest, K. Hicks, .........}
-%\address{Idaho State University, Pocatello, Idaho, 83209, USA}
-%\author{M. Contalbrigo, .......}
-%\address{INFN, Sezione di Ferrara, 44100 Ferrara, Italy}  
-%\author{M. Mirazita, .......}
-%\address{INFN, Laboratori Nazionali di Frascati, 00044 Frascati, Italy}
-%\author{K. Giovanetti, ......}
-%\address{James Madison University, Harrisonburg, Virginia 22807, USA}
-%\author{W. Kim, .....}
-%\address{Kyungpook National University, Daegu 41566, Republic of Korea}
-%\address{ ..........................................}
-%\vspace{-0.5cm}
+\address[toANL]{\ANL} 
+\address[toCSUDH]{\CSUDH} 
+\address[toCANISIUS]{\CANISIUS} 
+\address[toSACLAY]{\SACLAY} 
+\address[toCNU]{\CNU} 
+\address[toUCONN]{\UCONN} 
+\address[toDUKE]{\DUKE} 
+\address[toDUQUESNE]{\DUQUESNE} 
+\address[toFU]{\FU} 
+\address[toFERRARAU]{\FERRARAU} 
+\address[toFIU]{\FIU} 
+\address[toGWUI]{\GWUI} 
+\address[toISU]{\ISU} 
+\address[toINFNFE]{\INFNFE} 
+\address[toINFNFR]{\INFNFR} 
+\address[toINFNGE]{\INFNGE} 
+\address[toINFNRO]{\INFNRO} 
+\address[toINFNTUR]{\INFNTUR} 
+\address[toINFNPAV]{\INFNPAV} 
+\address[toORSAY]{\ORSAY} 
+\address[toJuelich]{\Juelich} 
+\address[toJMU]{\JMU} 
+\address[toKNU]{\KNU} 
+\address[toLAMAR]{\LAMAR} 
+\address[toMIT]{\MIT} 
+\address[toMISS]{\MISS} 
+\address[toITEP]{\ITEP} 
+\address[toUNH]{\UNH} 
+\address[toNSU]{\NSU} 
+\address[toOHIOU]{\OHIOU} 
+\address[toODU]{\ODU} 
+\address[toURICH]{\URICH} 
+\address[toROMAII]{\ROMAII} 
+\address[toMSU]{\MSU}
+\address[toSCAROLINA]{\SCAROLINA} 
+\address[toTEMPLE]{\TEMPLE} 
+\address[toJLAB]{\JLAB} 
+\address[toUTFSM]{\UTFSM} 
+\address[toINSUBRIA]{\INSUBRIA} 
+\address[toBRESCIA]{\BRESCIA} 
+\address[toGLASGOW]{\GLASGOW} 
+\address[toYORK]{\YORK} 
+\address[toVIRGINIA]{\VIRGINIA} 
+\address[toWM]{\WM} 
+\address[toYEREVAN]{\YEREVAN} 
 
 \begin{abstract}
 The CEBAF Large Acceptance Spectrometer for operation at 12~GeV beam energy (CLAS12) in Hall~B at
@@ -148,7 +353,7 @@ nuclei, and mesons, using polarized and unpolarized electron beams and targets f
 \end{abstract}
 
 \end{frontmatter}
-
+\begin{twocolumn}
 \noindent
 Keywords: CLAS12, Magnetic spectrometer, Electromagnetic physics, Large Acceptance, JLab
 
@@ -1674,6 +1879,7 @@ CLAS12 Run Groups, https://www.jlab.org/Hall-B/clas12-web/Hall\_B\_experiment\_r
 %\endinput
 %%
 %% End of file `elsarticle-template-harv.tex'.
+\end{twocolumn}
 \end{document}
 
 
