@@ -1,41 +1,18 @@
-%% Copyright 2007-2018 Elsevier Ltd
-%% 
-%% This file is part of the 'Elsarticle Bundle'.
-
-%% ---------------------------------------------
-%% 
-%% It may be distributed under the conditions of the LaTeX Project Public
-%% License, either version 1.2 of this license or (at your option) any
-%% later version.  The latest version of this license is in
-%%    http://www.latex-project.org/lppl.txt
-%% and version 1.2 or later is part of all distributions of LaTeX
-%% version 1999/12/01 or later.
-%% 
-%% The list of all files belonging to the 'Elsarticle Bundle' is
-%% given in the file `manifest.txt'.
-%% 
-%% Template article for Elsevier's document class `elsarticle'
-%% with harvard style bibliographic references
-
-\documentclass[final,3p,twocolumn]{elsarticle}
+\documentclass[final,3p]{elsarticle}
+\usepackage[utf8]{inputenc}
 \usepackage{amssymb}
  \usepackage{amsthm}
-%\usepackage{graphicx}% Include figure files
-%\usepackage{pdflscape}
- \usepackage[figuresright]{rotating}
- \usepackage{hyperref}
- \usepackage{subfig}
- \usepackage{lineno}
- \usepackage{natbib}
-%\usepackage{array}
-%\usepackage{dcolumn,multirow}
-
-\linenumbers
-\journal{Nuclear Instruments and Methods A}
-\begin{document}
-\begin{frontmatter}
-
-\title{The CLAS12 Spectrometer at Jefferson Laboratory}
+  \usepackage[figuresright]{rotating}
+   \usepackage{hyperref}
+    \usepackage{subfig}
+     \usepackage{lineno}
+      \usepackage{natbib}
+      
+ \linenumbers     
+ \journal{Nuclear Instruments and Methods A}
+ \begin{document}
+ \begin{frontmatter}
+\title{JLAB2 DataAnalysisHub}
 
 \newcommand*{\ANL}{Argonne National Laboratory, Argonne, Illinois 60439}
 \newcommand*{\ANLindex}{1}
@@ -75,8 +52,7 @@
 \newcommand*{\INFNTURindex}{18}
 \newcommand*{\INFNPAV}{INFN, Sezione di Pavia, 27100 Pavia, Italy}
 \newcommand*{\INFNPAVindex}{19}
-\newcommand*{\ORSAY}{Institut de Physique Nucl\'{e}aire, IN2P3-CNRS, Universit\'{e} Paris-Sud, Universit\'{e}
-  Paris-Sacla, F-91406 Orsay, France}
+\newcommand*{\ORSAY}{Institut de Physique Nucl\'{e}aire, IN2P3-CNRS, Universit\'{e} Paris-Sud, Universit\'{e} Paris-Sacla, F-91406 Orsay, France}
 \newcommand*{\ORSAYindex}{20}
 \newcommand*{\Juelich}{Institute fur Kernphysik (Juelich), 52428 Juelich, Germany}
 \newcommand*{\Juelichindex}{21}
@@ -129,7 +105,8 @@
 \newcommand*{\YEREVAN}{Yerevan Physics Institute, 375036 Yerevan, Armenia}
 \newcommand*{\YEREVANindex}{45}
  %%%%%%%%%%%%%%% END OF Latex Macros for institute addresses  %%%%%%%%%%%%%%%%%%%%%%%%% 
-
+ 
+ 
 \author[toJLAB]{V.D.~Burkert}
 \author[toMISS]{K.P. ~Adhikari}
 \author[toFIU]{S.~Adhikari}
@@ -354,13 +331,6 @@
 \address[toVIRGINIA]{\VIRGINIA} 
 \address[toWM]{\WM} 
 \address[toYEREVAN]{\YEREVAN} 
- 
-% \fntext[toNOWMISS]{Current address: Mississippi State, MS 39762-5167 }
-% \fntext[toNOWSACLAY]{Current address: F-91191 Gif-sur-Yvette, France }
-% \fntext[toNOWBRESCIA]{Current address: 25123 Brescia, Italy }
-% \fntext[toNOWGWUI]{Current address: Washington, DC 20052 }
- 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{abstract}
 The CEBAF Large Acceptance Spectrometer for operation at 12~GeV beam energy (CLAS12) in Hall~B at
@@ -383,7 +353,7 @@ nuclei, and mesons, using polarized and unpolarized electron beams and targets f
 \end{abstract}
 
 \end{frontmatter}
-
+\begin{twocolumn}
 \noindent
 Keywords: CLAS12, Magnetic spectrometer, Electromagnetic physics, Large Acceptance, JLab
 
@@ -1909,6 +1879,7 @@ CLAS12 Run Groups, https://www.jlab.org/Hall-B/clas12-web/Hall\_B\_experiment\_r
 %\endinput
 %%
 %% End of file `elsarticle-template-harv.tex'.
+\end{twocolumn}
 \end{document}
 
 
