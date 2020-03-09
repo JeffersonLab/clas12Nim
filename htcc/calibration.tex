@@ -52,7 +52,7 @@ stay the same or close to the same in different calibration runs that are taken 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.99\linewidth]{images/WILLIAM_5.png}
-\caption{Single photoelectron peak position as a function of LMS light intensity at constant high voltage for a
+\caption{Normalized single photoelectron peak position as a function of LMS light intensity at constant high voltage for a
   representative HTCC PMT. The red lines show a $\pm$5\% deviation, and the blue line shows the averaged
   single photoelectron peak position.}
 \label{fig:WILLIAM_5}
@@ -103,8 +103,7 @@ offline calibration.
 The online calibration is done using the independent trigger from the Forward Tagger detector~\cite{ft-nim}. The
 timing of all 48 HTCC channels is aligned in the FADC configuration files by setting the appropriate delays with a
 precision of 4~ns (the best available using the FADC). Since the timing resolution of individual channels is on the
-order of about 1~ns, we can achieve better resolution of the detector than the 4~ns available from the FADC. To do
-so, we calculate the time at the beam-target interaction vertex for each of the 48 channels and estimate the time
+order of about 1~ns, we can achieve better resolution of the detector than the 4~ns available from the FADC. The timing is obtained by wave-form analysis of the FADC pulse. We calculate the time at the beam-target interaction vertex for each of the 48 channels and estimate the time
 shift between the individual channels. These time shifts are added to the ccdb database and are applied at the
 reconstruction stage. Figure~\ref{fig:htcccombinedTimingResponce} shows the timing resolution combined over all
 48 PMTs is on the level of 0.6~ns.
